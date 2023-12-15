@@ -1,0 +1,155 @@
+.month-view-container {
+
+  display: flex;
+  justify-content: center;
+
+  .month-list {
+
+    width: 250px;
+    height: 250px;
+    display: flex;
+    //border: 1px solid #000;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    //box-shadow: 0 -5px 5px rgba(255,255,255,0.4), inset 0 5px 3px rgba(255,255,255,0.8), inset 0 -5px 5px rgba(0,0,0,0.2), 0 11px 18px rgba(0,0,0,0.18), 0 -20px 30px rgba(255,255,255,0.8);
+
+    .month {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      font-weight: bold;
+      position: absolute;
+      transform-origin: 50% 100%;
+      transition: background-color 0.3s;
+      cursor: pointer;
+      text-indent: -9999em;
+
+      &:nth-child(1) {
+        transform: rotate(300deg) translate(82px) rotate(-300deg);
+      }
+
+      &:nth-child(2) {
+        transform: rotate(330deg) translate(82px) rotate(-330deg);
+      }
+
+      &:nth-child(3) {
+        transform: rotate(360deg) translate(82px) rotate(-360deg);
+      }
+
+      &:nth-child(4) {
+        transform: rotate(30deg) translate(82px) rotate(-30deg);
+      }
+
+      &:nth-child(5) {
+        transform: rotate(60deg) translate(82px) rotate(-60deg);
+      }
+
+      &:nth-child(6) {
+        transform: rotate(90deg) translate(82px) rotate(-90deg);
+      }
+
+      &:nth-child(7) {
+        transform: rotate(120deg) translate(82px) rotate(-120deg);
+      }
+
+      &:nth-child(8) {
+        transform: rotate(150deg) translate(82px) rotate(-150deg);
+      }
+
+      &:nth-child(9) {
+        transform: rotate(180deg) translate(82px) rotate(-180deg);
+      }
+
+      &:nth-child(10) {
+        transform: rotate(210deg) translate(82px) rotate(-210deg);
+      }
+
+      &:nth-child(11) {
+        transform: rotate(240deg) translate(82px) rotate(-240deg);
+      }
+
+      &:nth-child(12) {
+        transform: rotate(270deg) translate(82px) rotate(-270deg);
+      }
+
+      &:after {
+        content: "";
+        width: 8px;
+        height: 8px;
+        background-color: #333;
+        border-radius: 50%;
+      }
+
+      &.before-selected, &.selected, &.last {
+        &:after {
+          background-color: transparent;
+        }
+      }
+    }
+
+    .month-name {
+    }
+  }
+
+  .selected-month {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    box-shadow: 0 -5px 5px rgba(255,255,255,0.4), inset 0 5px 3px rgba(255,255,255,0.8), inset 0 -5px 5px rgba(0,0,0,0.2), 0 11px 18px rgba(0,0,0,0.18), 0 -20px 30px rgba(255,255,255,0.8);
+    border-radius: 50%;
+    font-size: 4rem;
+    flex-direction: column;
+    z-index: 1;
+
+    .sel-month-val {
+      font-weight: bold;
+    }
+
+    .sel-month-name {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.progress-ring {
+  width: 200px;
+  height: 200px;
+}
+
+
+.progress-container {
+  position: absolute;
+  justify-content: center;
+  height: 250px;
+  display: flex;
+  align-items: center;
+}
+
+.progress-ring {
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.progress-ring-circle {
+  fill: transparent;
+  stroke-width: 25;
+  stroke-linecap: round;
+}
+
+.percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  color: #3498db; /* Set the color */
+}

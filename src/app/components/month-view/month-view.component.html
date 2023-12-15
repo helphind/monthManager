@@ -1,0 +1,32 @@
+<div class="month-view-container">
+  <div class="month-list">
+    <div class="month" *ngFor="let month of months; let isLast = last" (click)="handleMonthClicked(month)"
+         [class.selected]="selectedMonth === month"
+         [class.last]="isLast"
+         [class.before-selected]="month < selectedMonth">
+      <div class="month-name">{{month}}</div>
+    </div>
+
+
+    <div class="selected-month">
+      <div class="sel-month-val">{{selectedMonth}}</div>
+      <div class="sel-month-name">{{selectedMonth == 1 ? 'Month' : 'Months'}}</div>
+    </div>
+  </div>
+
+
+  <div class="progress-container">
+    <svg class="progress-ring">
+      <circle
+        class="progress-ring-circle"
+        [style.stroke]="color"
+        [style.stroke-dasharray]="circumference"
+        [style.stroke-dashoffset]="dashoffset"
+        [attr.r]="radius"
+        [attr.cx]="axis"
+        [attr.cy]="axis"
+      />
+    </svg>
+  </div>
+
+</div>
